@@ -1,18 +1,107 @@
+:root{
+  --dark-color: #000000ec;
+  --light-color: white;
+  --ascent-color-1: #B8D9E6;
+  --ascent-color-2: #CEE6B8;
+  --ascent-color-3: #E0B8E6;
+  --ascent-color-4: #E6D0B8;
+  --ascent-color-dark: #8B6091;
+  --ff: "Roboto", sans-serif;
+  --h1: bold max(26px, 2vw) / max(30px, 2.6vw) var(--ff);
+  --h2: bold max(16px, 1.5vw) / max(24px, 2.4vw) var(--ff);
+  --p: max(12px, 1.2vw) / max(18px, 2vw) var(--ff);
+  --p-decr: max(10px, 1vw) / max(14px, 1.4vw) var(--ff);
+
+}
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body{
-  background-color: rgba(0, 0, 0, 0.829);
+  background-color: var(--dark-color);
+  font-family: var(--ff);
+}
+h1{
+  font: var(--h1);
+  color: var(--ascent-color-dark);
 }
 header{
-  height: 24vh;
   border: solid 1px aqua;
+  margin: 36px;
+  display: flex;
+  position: relative;
+}
+.name{
+  position: absolute;
+}
+.header-img img{
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+}
+.about-me{
+  background-color: var(--light-color);
+  margin: 16px 16px 16px 0;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 8px;
+}
+.about-me p{
+  font: var(--p)
+}
+.profile-links{
+  display: flex;
+  gap: 8px;
+  justify-self: flex-end;
+}
+.profile-links svg{
+  width: 28px;
+  height: 28px;
+  stroke: var(--dark-color)
+}
+main{
+  height: 90vh;
+}
+.project-links svg{
+  width: 20px;
+  height: 20px;
 }
 footer{
-  /* position: fixed; */
-  bottom: 0;
-  height: 24vh;
+  padding: 36px;
+  display: flex;
+  background-color: var(--ascent-color-1);
   border: solid 1px rgb(119, 0, 255);
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+footer div > *{
+  display: inline;
+}
+.contact{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contact-phone,
+.contact-email{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.contact-phone svg,
+.contact-email svg{
+  width: 20px;
+  height: 20px;
+}
+.footer-img img{
+  /* width: 110%;
+  height: 110%; */
+  object-fit: cover;
+}
+svg{
+  display: inline;
+  stroke: var(--dark-color);
 }
